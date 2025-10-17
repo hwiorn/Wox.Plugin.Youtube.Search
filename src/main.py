@@ -14,6 +14,8 @@ from wox_plugin import (
     ResultAction,
     WoxImage,
     WoxImageType,
+    WoxPreview,
+    WoxPreviewType,
 )
 
 
@@ -323,6 +325,25 @@ class YouTubeSearchPlugin(Plugin):
                     ),
                 ]
 
+                # Build preview content
+                preview_content = f"# {title}\n\n"
+                preview_content += f"**Channel:** {channel_title}\n\n"
+
+                if duration_formatted:
+                    preview_content += f"**Duration:** {duration_formatted}\n\n"
+
+                if view_count_formatted:
+                    preview_content += f"**Views:** {view_count_formatted}\n\n"
+
+                if publish_date:
+                    preview_content += f"**Published:** {publish_date}\n\n"
+
+                preview_content += f"**Video ID:** `{video_id}`\n\n"
+                preview_content += f"**URL:** [{video_url}]({video_url})\n\n"
+
+                if description:
+                    preview_content += f"## Description\n\n{description}\n"
+
                 # Create result
                 results.append(
                     Result(
@@ -331,6 +352,10 @@ class YouTubeSearchPlugin(Plugin):
                         icon=WoxImage(
                             image_type=WoxImageType.RELATIVE,
                             image_data="image/app.png",
+                        ),
+                        preview=WoxPreview(
+                            preview_type=WoxPreviewType.MARKDOWN,
+                            preview_data=preview_content,
                         ),
                         context_data=json.dumps(
                             {

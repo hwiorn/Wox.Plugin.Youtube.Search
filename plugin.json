@@ -20,6 +20,14 @@
     "linux",
     "darwin"
   ],
+  "Features": [
+    {
+      "Name": "resultPreviewWidthRatio",
+      "Params": {
+        "WidthRatio": "0.5"
+      }
+    }
+  ],
   "SettingDefinitions": [
     {
       "Type": "textbox",

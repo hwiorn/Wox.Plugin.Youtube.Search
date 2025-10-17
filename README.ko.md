@@ -21,16 +21,16 @@ Wox 런처에서 직접 YouTube Data API를 사용하여 YouTube 동영상을 �
 
 ## 📦 설치
 
-1. Wox 플러그인 디렉토리로 이동:
-   - **macOS**: `~/.wox/wox-user/plugins/`
-   - **Windows**: `%APPDATA%\Wox\plugins\`
-   - **Linux**: `~/.config/wox/plugins/`
+1. 최신 릴리스 다운로드:
+   - [Releases 페이지](https://github.com/hwiorn/Wox.Plugin.Youtube.Search/releases)로 이동
+   - 최신 릴리스 파일 다운로드
 
-2. 이 저장소를 플러그인 디렉토리에 클론하거나 다운로드:
-   ```bash
-   cd ~/.wox/wox-user/plugins/
-   git clone https://github.com/hwiorn/Wox.Plugin.Youtube.Search.git
-   ```
+2. 압축 해제 및 설치:
+   - 다운로드한 파일의 압축 해제
+   - 압축 해제된 폴더를 Wox 플러그인 디렉토리로 이동:
+     - **macOS**: `~/.wox/wox-user/plugins/`
+     - **Windows**: `%APPDATA%\Wox\plugins\`
+     - **Linux**: `~/.config/wox/plugins/`
 
 3. Wox 재시작
 

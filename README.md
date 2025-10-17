@@ -21,16 +21,16 @@ A Wox 2 plugin that enables you to search YouTube videos using the YouTube Data 
 
 ## 📦 Installation
 
-1. Go to the Wox plugin directory:
-   - **macOS**: `~/.wox/wox-user/plugins/`
-   - **Windows**: `%APPDATA%\Wox\plugins\`
-   - **Linux**: `~/.config/wox/plugins/`
+1. Download the latest release:
+   - Go to the [Releases page](https://github.com/hwiorn/Wox.Plugin.Youtube.Search/releases)
+   - Download the latest release file
 
-2. Clone or download this repository into the plugins directory:
-   ```bash
-   cd ~/.wox/wox-user/plugins/
-   git clone https://github.com/hwiorn/Wox.Plugin.Youtube.Search.git
-   ```
+2. Extract and install:
+   - Extract the downloaded file
+   - Move the extracted folder to the Wox plugin directory:
+     - **macOS**: `~/.wox/wox-user/plugins/`
+     - **Windows**: `%APPDATA%\Wox\plugins\`
+     - **Linux**: `~/.config/wox/plugins/`
 
 3. Restart Wox
 

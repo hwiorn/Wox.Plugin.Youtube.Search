@@ -1,0 +1,39 @@
+{
+  "Id": "A9D63BBE-A2E6-428A-B5E9-97BBC184A5FB",
+  "TriggerKeywords": [
+    "yt",
+    "ytb",
+    "youtube",
+    "video"
+  ],
+  "Name": "YouTube Search",
+  "Description": "Search YouTube videos using YouTube Data API",
+  "Author": "Tim Lee <hwiorn@gmail.com>",
+  "Version": "0.1.0",
+  "MinWoxVersion": "2.0.0",
+  "Runtime": "python",
+  "Website": "https://github.com/hwiorn/Wox.Plugin.Youtube.Search",
+  "Entry": "YouTubeSearch/main.py",
+  "Icon": "relative:image/app.png",
+  "SupportedOS": [
+    "windows",
+    "linux",
+    "darwin"
+  ],
+  "SettingDefinitions": [
+    {
+      "Type": "textbox",
+      "Value": {
+        "Key": "youtube_api_key",
+        "DefaultValue": "",
+        "Label": "YouTube Data API Key",
+        "MaxLines": 1,
+        "Tooltip": "Your YouTube Data API key from Google Cloud Console. Get it from: https://console.cloud.google.com/apis/credentials",
+        "Style": {
+          "PaddingRight": 10,
+          "Width": 500
+        }
+      }
+    }
+  ]
+}

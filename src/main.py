@@ -325,24 +325,21 @@ class YouTubeSearchPlugin(Plugin):
                     ),
                 ]
 
-                # Build preview content
-                preview_content = f"# {title}\n\n"
-                preview_content += f"**Channel:** {channel_title}\n\n"
+                # Build preview properties
+                preview_properties = {
+                    "Channel": channel_title,
+                    "Video ID": video_id,
+                    "URL": video_url,
+                }
 
                 if duration_formatted:
-                    preview_content += f"**Duration:** {duration_formatted}\n\n"
+                    preview_properties["Duration"] = duration_formatted
 
                 if view_count_formatted:
-                    preview_content += f"**Views:** {view_count_formatted}\n\n"
+                    preview_properties["Views"] = view_count_formatted
 
                 if publish_date:
-                    preview_content += f"**Published:** {publish_date}\n\n"
-
-                preview_content += f"**Video ID:** `{video_id}`\n\n"
-                preview_content += f"**URL:** [{video_url}]({video_url})\n\n"
-
-                if description:
-                    preview_content += f"## Description\n\n{description}\n"
+                    preview_properties["Published"] = publish_date
 
                 # Create result
                 results.append(
@@ -354,8 +351,9 @@ class YouTubeSearchPlugin(Plugin):
                             image_data="image/app.png",
                         ),
                         preview=WoxPreview(
-                            preview_type=WoxPreviewType.MARKDOWN,
-                            preview_data=preview_content,
+                            preview_type=WoxPreviewType.TEXT,
+                            preview_data=description if description else title,
+                            preview_properties=preview_properties,
                         ),
                         context_data=json.dumps(
                             {
